@@ -1,0 +1,135 @@
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.confirm-modal {
+  background: white;
+  padding: 1.5rem 1rem;
+  border-radius: 12px;
+  width: 40%;
+  max-width: 400px;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  animation: popIn 0.3s ease;
+  text-align: center;
+
+  &.success {
+    .confirm {
+      background: #4caf50;
+    }
+
+    &.with-top {
+      border-top: 4px solid #4caf50;
+    }
+  }
+
+  &.warning {
+    .confirm {
+      background: #ff9800;
+    }
+
+    &.with-top {
+      border-top: 4px solid #ff9800;
+    }
+  }
+
+  &.error {
+    .confirm {
+      background: #f44336;
+    }
+
+    &.with-top {
+      border-top: 4px solid #f44336;
+    }
+  }
+
+  .progress-container {
+    position: absolute;
+    top: 0;
+    left: 2%;
+    width: 96%;
+    height: 4px;
+    overflow: hidden;
+    border-radius: 4px;
+  }
+
+  .progress-bar {
+    height: 100%;
+    transition: width 0.1s linear;
+
+    &.success {
+      background-color: #4caf50;
+    }
+
+    &.warning {
+      background-color: #ff9800;
+    }
+
+    &.error {
+      background-color: #f44336;
+    }
+  }
+
+  p {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .modal-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .icon {
+    font-size: 48px;
+  }
+
+  .success-icon {
+    color: #4caf50; // green
+  }
+
+  .warning-icon {
+    color: #ff9800;
+  }
+
+  .error-icon {
+    color: #f44336; // red
+  }
+
+  .btns {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    width: 100%;
+
+    button {
+      flex: 1; // Each button takes 50%
+      padding: 8px 16px;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .cancel {
+      background: #e0e0e0;
+      color: #333;
+    }
+
+    .confirm {
+      color: white;
+    }
+  }
+}
