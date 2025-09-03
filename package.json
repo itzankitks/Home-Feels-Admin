@@ -49,5 +49,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:8000/api"
+  "proxy": "https://home-feels-server.onrender.com/api"
 }
